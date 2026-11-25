@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Una pregunta para Demi 💛</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero" id="intro">
+  <div class="panel">
+    <div class="kicker">Una pequeña sorpresa para ti</div>
+    <h1>Demi… 💛</h1>
+    <p>Preparé algo un poquito cursi, un poquito divertido y muy especial.</p>
+    <p class="small">Prometo que no hay presión; solo abre esto cuando tengas ganas de sonreír.</p>
+    <button onclick="openPage()">Abrir mi sorpresa ✨</button>
+  </div>
+</header>
+
+<main id="content">
+<section>
+<div class="wrap center">
+  <div class="flowers">🌻 🌷 🌼 🌷 🌻</div>
+  <h2>Una pregunta muy seria…<br><small>(bueno, más o menos)</small></h2>
+  <div class="card">
+    <p>Si las historias bonitas tuvieran un capítulo inesperado, creo que este sería el mío. No tengo un anillo de diamantes ni un salón elegante… pero sí una pregunta, una sonrisa nerviosa imaginaria y muchas ganas de hacerte un detalle.</p>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="card poem">
+    <h2>Poema: “Mi lugar favorito”</h2>
+    No sé si exista un lugar perfecto,<br>
+    ni si los cuentos se hacen realidad,<br>
+    pero entre tantas cosas de este mundo<br>
+    hay momentos que quisiera guardar.<br><br>
+    Las risas, las pláticas sin horario,<br>
+    las canciones que nos hacen recordar,<br>
+    las pequeñas tonterías de cada día<br>
+    que de alguna forma se vuelven especial.<br><br>
+    No prometo una vida sin problemas,<br>
+    ni tener siempre la respuesta ideal;<br>
+    prometo hablar, aprender y escucharte,<br>
+    y cuidar con cariño nuestra amistad.<br><br>
+    Así que hoy, con toda mi cursilería,<br>
+    y una propuesta que es pura diversión,<br>
+    quiero preguntarte si aceptarías<br>
+    este pequeño “sí” de imaginación. 💛
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="certificate">
+    <div class="certificate-icon">💍🌻</div>
+    <h2>ACTA SIMBÓLICA DE MATRIMONIO</h2>
+    <p><b>(Documento especial) 100% validez en nuestro reino de cursilería ✨</b></p>
+    <p>En el reino de las ocurrencias bonitas, se deja constancia de que:</p>
+
+    <input type="text" id="nombreAlfred" placeholder="Escribe el nombre de Alfred" value="Alfred Ni-Ki" aria-label="Nombre de Alfred">
+
+    <p>presenta una propuesta simbólica, amistosa y llena de cariño a</p>
+
+    <input type="text" id="nombreDemi" placeholder="Escribe el nombre de Demi" value="Angela Demi" aria-label="Nombre de Demi">
+
+    <p>para formar un equipo oficial de risas, memes, canciones, apoyo mutuo y aventuras imaginarias.</p>
+    <p><b>Este acuerdo incluye:</b></p>
+    <p>
+      ♡ Compartir canciones que se queden pegadas.<br>
+      ♡ Reírnos de nuestras tonterías.<br>
+      ♡ Ser honestos y hablar con respeto.<br>
+      ♡ Celebrar los pequeños momentos.<br>
+      ♡ Recordar que este papel es una broma bonita y que cada quien puede decir sí, no o “me dio risa”.
+    </p>
+    <p>Firmado con cariño y cero presión, en una fecha que quedará para el recuerdo.</p>
+    <div class="stamp">CERTIFICADO<br>DE CURSILERÍA ✨</div>
+
+    <div class="signature-box">
+      <p>Firma de Alfred ✍️</p>
+      <img class="signature-image" src="firma_alfred.png" alt="Firma de Alfred">
+    </div>
+
+    <div class="signature-box">
+      <p>Firma de Demi ✍️</p>
+      <canvas id="firmaDemi" aria-label="Espacio para la firma de Demi"></canvas>
+      <button type="button" onclick="borrarFirma('firmaDemi')">Borrar firma</button>
+    </div>
+
+    <p class="certificate-ending">Un documento hecho con cariño, imaginación y muchas flores amarillas. 🌻</p>
+    <button type="button" onclick="imprimirActa()">📄 Guardar acta / Imprimir</button>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="card center">
+    <h2>Playlist para este momento 🎧</h2>
+    <p>Una colección de canciones para acompañar esta pequeña sorpresa.</p>
+    <a href="https://open.spotify.com/playlist/6SkFKJFRpchFLMX1W4WdP3?si=c44cce53768149d9" target="_blank" rel="noopener" class="playlist-link">🎵 Abrir nuestra playlist</a>
+    <p class="small">Puedes reemplazar el enlace por el link de Spotify, YouTube o tu playlist.</p>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="card center">
+    <h2>Un rinconcito de recuerdos 📷</h2>
+    <p>Estas son algunas fotos que acompañan esta sorpresa. 💛</p>
+    <div class="grid">
+      <div class="photo"><img src="../Sorpresa_demi/imagenes/primera imagen.jpeg" alt="Primera foto que me mandaste"></div>
+      <div class="photo"><img src="../Sorpresa_demi/imagenes/WhatsApp Image 2026-11-23 at 7.12.56 PM.jpeg" alt="Mi foto favorita"></div>
+      <div class="photo"><img src="../Sorpresa_demi/imagenes/chiquita.jpeg" alt="Tu de chiquita"></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap center">
+  <div class="card">
+    <h2>Y ahora, la pregunta…</h2>
+    <p class="question">Demi, ¿aceptarías esta propuesta simbólica y especial, para seguir compartiendo momentos, cariño, confianza y recuerdos bonitos conmigo? 💍</p>
+    <button onclick="answer('Me haces muy feliz. Gracias por aceptar este pequeño detalle de corazón. 💛')">Sí, acepto 💛</button>
+    <button onclick="answer('Está bien. Tómate tu tiempo; lo importante es que te sientas cómoda y puedas responder con sinceridad. 🤍')">Quiero pensarlo 🤍</button>
+    <p id="answer" class="answer"></p>
+  </div>
+  <div class="card poem">
+    <h2>Últimas palabras</h2>
+    No es una promesa enorme ni un contrato,<br>
+    solo una sorpresa hecha con cariño.<br>
+    Gracias por leer hasta aquí<br>
+    y por regalarle un ratito a esta locura. 🤍
+  </div>
+</div>
+</section>
+<footer>Hecho con cariño y un poquito de vergüenza cursi. 🌙💛</footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

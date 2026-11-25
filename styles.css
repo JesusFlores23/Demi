@@ -1,0 +1,144 @@
+ :root{--bg:#120f20;--card:#211a35;--gold:#f6d77a;--pink:#f2b8d2;--text:#fff4f8;--muted:#d6c9df}
+*{box-sizing:border-box}
+body{margin:0;color:var(--text);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at top,#33254a 0,#171225 45%,#0c0a15 100%);line-height:1.7}
+button,a{font:inherit}
+.hero{min-height:100vh;display:grid;place-items:center;padding:28px;text-align:center;position:relative;overflow:hidden}
+.hero:before{content:"✦  ✧   ✦   ✧  ✦";position:absolute;top:10%;left:0;right:0;color:#e9d5ff55;font-size:2rem;letter-spacing:1.5rem}
+.panel{width:min(760px,100%);padding:clamp(24px,5vw,52px);border:1px solid #f6d77a55;background:#211a35cc;backdrop-filter:blur(8px);border-radius:28px;box-shadow:0 20px 80px #0006}
+.kicker{letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-size:.8rem}
+h1{font-size:clamp(2.2rem,7vw,4.5rem);line-height:1.1;margin:18px 0;color:#fff0c7}
+h2{color:var(--gold);font-size:clamp(1.6rem,4vw,2.5rem)}
+h3{color:var(--pink)}
+p{font-size:1.08rem}
+button{border:0;border-radius:999px;padding:13px 24px;background:linear-gradient(135deg,var(--gold),#f5b9cf);color:#26192d;font-weight:bold;cursor:pointer;box-shadow:0 8px 24px #0004;transition:transform .2s;margin:5px}
+button:hover{transform:translateY(-2px)}
+.small{color:var(--muted);font-size:.92rem}
+#content{display:none}
+section{padding:60px 20px}
+.wrap{width:min(950px,100%);margin:auto}
+.card{background:#211a35d9;border:1px solid #ffffff15;border-radius:22px;padding:26px;margin:18px 0}
+.center{text-align:center}
+.poem{white-space:pre-line;text-align:center;font-size:1.1rem}
+.certificate{background:#fff8df;color:#3c2942;border:9px double #d7a94e;border-radius:12px;padding:clamp(20px,5vw,45px);text-align:center;box-shadow:0 15px 35px #0004}
+.certificate h2{color:#8a4d75}
+.certificate-icon{font-size:2rem}
+.stamp{display:inline-block;border:2px dashed #b56a85;border-radius:50%;padding:14px 18px;color:#a44e73;transform:rotate(-9deg);font-weight:bold;margin-top:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.photo{min-height:220px;border:1px dashed #e6c5dd;border-radius:18px;background:#ffffff08;display:grid;place-items:center;text-align:center;padding:12px;color:var(--muted)}
+.photo img{width:100%;height:220px;object-fit:cover;border-radius:14px}
+.flowers{font-size:2.3rem;letter-spacing:.2em}
+footer{text-align:center;padding:35px;color:var(--muted)}
+.hidden{display:none}
+.playlist-link{color:var(--gold)}
+.question{font-size:1.3rem}
+.answer{color:var(--gold);font-size:1.15rem;margin-top:18px}
+.certificate input[type="text"]{width:min(90%,400px);padding:10px;border:1px solid #d7a94e;border-radius:8px;background:#fffdf4;color:#3c2942;font-family:Georgia,'Times New Roman',serif;font-size:1.1rem;text-align:center;margin:8px auto}
+.signature-box{margin:25px auto;width:min(100%,500px)}
+.signature-box canvas{display:block;width:100%;height:160px;background:#fffdf4;border:2px dashed #b56a85;border-radius:10px;touch-action:none;cursor:crosshair}
+.signature-box p{margin-bottom:5px;color:#8a4d75;font-weight:bold}
+.signature-box button{margin-top:10px;background:#e8c9db;color:#3c2942;box-shadow:none;padding:9px 18px}
+.certificate-ending{margin-top:28px}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 7mm;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    color: #3c2942 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  #intro, footer, button {
+    display: none !important;
+  }
+
+  #content {
+    display: block !important;
+  }
+
+  #content > section {
+    display: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Imprime únicamente la sección del acta (tercera sección del contenido) */
+  #content > section:nth-of-type(3) {
+    display: block !important;
+  }
+
+  #content > section:nth-of-type(3) .wrap {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .certificate {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 9mm 8mm !important;
+    border: 5px double #d7a94e !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-size: 10.5pt !important;
+    line-height: 1.35 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .certificate h2 {
+    font-size: 19pt !important;
+    margin: 7px 0 !important;
+  }
+
+  .certificate p {
+    font-size: 10.5pt !important;
+    margin: 7px 0 !important;
+  }
+
+  .certificate input[type="text"] {
+    display: block !important;
+    width: 75% !important;
+    padding: 4px !important;
+    margin: 4px auto !important;
+    font-size: 12pt !important;
+    border: 1px solid #d7a94e !important;
+    background: #fffdf4 !important;
+  }
+
+  .stamp {
+    margin: 7px auto !important;
+    padding: 7px 12px !important;
+    font-size: 10pt !important;
+  }
+
+  .signature-box {
+    width: 80% !important;
+    margin: 8px auto !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .signature-box p {
+    font-size: 11pt !important;
+    margin: 4px 0 !important;
+  }
+
+  .signature-box canvas {
+    height: 65px !important;
+    border: 1px dashed #b56a85 !important;
+  }
+
+  .certificate-ending {
+    margin-top: 8px !important;
+  }
+}
+
+.signature-image{display:block;width:min(100%,500px);height:160px;object-fit:contain;margin:0 auto;background:transparent;}
+@media print{.signature-image{height:65px!important;width:80%!important;object-fit:contain!important;margin:4px auto!important;}}
